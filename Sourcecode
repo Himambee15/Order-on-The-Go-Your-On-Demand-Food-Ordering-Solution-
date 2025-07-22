@@ -1,0 +1,228 @@
+Great! Based on the two Express server setups shown in your screenshots and assuming you're working on a MERN stack project (like a food delivery or shopping app), here's a combined and clean Node.js backend server code using Express, Mongoose, and other essential middleware.
+
+
+---
+
+✅ Final index.js (inside /server folder)
+
+import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import cors from "cors";
+import bcrypt from "bcrypt";
+
+// Import Mongoose models
+import { Admin, Cart, FoodItem, Orders, Restaurant, User } from "./Schema.js";
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
+
+// MongoDB Connection
+const PORT = 6001;
+const CONNECTION_URL = "mongodb://localhost:27017/foodDelivery";
+
+mongoose.connect(CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => {
+    console.log("MongoDB connected successfully");
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+})
+.catch((err) => {
+    console.error("Connection error:", err.message);
+});
+
+
+---
+
+🧠 Notes:
+
+This code:
+
+Connects to MongoDB foodDelivery database.
+
+Great! Based on the two Express server setups shown in your screenshots and assuming you're working on a MERN stack project (like a food delivery or shopping app), here's a combined and clean Node.js backend server code using Express, Mongoose, and other essential middleware.
+
+
+---
+
+✅ Final index.js (inside /server folder)
+
+import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import cors from "cors";
+import bcrypt from "bcrypt";
+
+// Import Mongoose models
+import { Admin, Cart, FoodItem, Orders, Restaurant, User } from "./Schema.js";
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
+
+// MongoDB Connection
+const PORT = 6001;
+const CONNECTION_URL = "mongodb://localhost:27017/foodDelivery";
+
+mongoose.connect(CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => {
+    console.log("MongoDB connected successfully");
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+})
+.catch((err) => {
+    console.error("Connection error:", err.message);
+});
+
+
+---
+
+🧠 Notes:
+
+This code:
+
+Connects to MongoDB foodDelivery database.
+
+Sets up middlewares (body-parser, cors).
+
+Starts server at port 6001.
+
+Imports multiple models from Schema.js (which you should define).
+
+
+
+
+---
+
+📁 Folder Structure:
+
+project-root/
+├── client/                # React frontend
+├── server/
+│   ├── index.js           # Main backend file (shown above)
+│   ├── Schema.js          # Mongoose models
+│   ├── package.json
+│   └── package-lock.json
+
+
+---
+
+If you'd like help with your Schema.js code for User, FoodItem, Orders, etc., just say the word and I’ll generate that too.
+Sets up middlewares (body-parser, cors).
+
+Starts server at port 6001.
+
+Imports multiple models from Schema.js (which you should define).
+
+
+
+
+---
+
+📁 Folder Structure:
+
+project-root/
+├── client/                # React frontend
+├── server/
+│   ├── index.js           # Main backend file (shown above)
+│   ├── Schema.js          # Mongoose models
+│   ├── package.json
+│   └── package-lock.json
+
+
+---
+
+If you'd like help with your Schema.js code for User, FoodItem, Orders, etc., just say the word and I’ll generate that too.
+Great! Based on the two Express server setups shown in your screenshots and assuming you're working on a MERN stack project (like a food delivery or shopping app), here's a combined and clean Node.js backend server code using Express, Mongoose, and other essential middleware.
+
+
+---
+
+✅ Final index.js (inside /server folder)
+
+import express from "express";
+import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import cors from "cors";
+import bcrypt from "bcrypt";
+
+// Import Mongoose models
+import { Admin, Cart, FoodItem, Orders, Restaurant, User } from "./Schema.js";
+
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(bodyParser.json({ limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
+
+// MongoDB Connection
+const PORT = 6001;
+const CONNECTION_URL = "mongodb://localhost:27017/foodDelivery";
+
+mongoose.connect(CONNECTION_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => {
+    console.log("MongoDB connected successfully");
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+})
+.catch((err) => {
+    console.error("Connection error:", err.message);
+});
+
+
+---
+
+🧠 Notes:
+
+This code:
+
+Connects to MongoDB foodDelivery database.
+
+Sets up middlewares (body-parser, cors).
+
+Starts server at port 6001.
+
+Imports multiple models from Schema.js (which you should define).
+
+
+
+
+---
+
+📁 Folder Structure:
+
+project-root/
+├── client/                # React frontend
+├── server/
+│   ├── index.js           # Main backend file (shown above)
+│   ├── Schema.js          # Mongoose models
+│   ├── package.json
+│   └── package-lock.json
+
+
+---
+
+If you'd like help with your Schema.js code for User, FoodItem, Orders, etc., just say the word and I’ll generate that too.
